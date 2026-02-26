@@ -40,7 +40,7 @@ app.get('/api/trains', (req, res) => {
         JOIN Train_Status ts ON t.Train_ID = ts.Train_ID
         JOIN Station s1 ON t.Source_Station_ID = s1.Station_ID
         JOIN Station s2 ON t.Dest_Station_ID = s2.Station_ID
-        WHERE 1=1 `; // "WHERE 1=1" is a trick that allows us to easily append "AND..." conditions below
+        WHERE 1=1 `;
 
     const params = [];
 

@@ -30,7 +30,7 @@ function Booking({ user }) {
       alert('Booking Successful!');
       navigate('/my-bookings');
     } catch (err) {
-      alert('Booking Failed, please try again and fill all fields');
+      alert('Booking Failed, please try again and fill all fields, or check seat availability or check Date of Journey.');
     }
   };
 
