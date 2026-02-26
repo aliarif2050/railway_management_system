@@ -1,6 +1,6 @@
 # Railway Management System
 
-A full-stack Railway Management System for booking and managing train tickets. This project demonstrates a modern web application architecture using the MERN stack, with a focus on authentication, booking management, and responsive UI.
+A full-stack Railway Management System for booking and managing train tickets. This project demonstrates a modern web application architecture using React, Node.js, Express, and MySQL, with a focus on authentication, booking management, and responsive UI.
 
 ## Table of Contents
 - [Tech Stack](#tech-stack)
@@ -14,7 +14,7 @@ A full-stack Railway Management System for booking and managing train tickets. T
 ## Tech Stack
 - **Frontend:** React.js, Tailwind CSS
 - **Backend:** Node.js, Express.js
-- **Database:** MongoDB
+- **Database:** MySQL
 - **Other Tools:** PostCSS, JWT (JSON Web Tokens)
 
 ## Core Concepts
@@ -24,6 +24,7 @@ A full-stack Railway Management System for booking and managing train tickets. T
 - **Responsive Design:** Tailwind CSS for mobile-first, responsive layouts.
 - **Component-Based Architecture:** Modular React components for maintainability.
 - **Error Handling:** Robust error handling on both client and server.
+- **Relational Database Design:** MySQL used for structured data storage and relationships.
 
 ## Features
 - User registration and login
@@ -36,7 +37,7 @@ A full-stack Railway Management System for booking and managing train tickets. T
 
 ### Prerequisites
 - Node.js (v16+ recommended)
-- MongoDB (local or cloud)
+- MySQL Server
 
 ### Installation
 1. **Clone the repository:**
@@ -56,7 +57,14 @@ A full-stack Railway Management System for booking and managing train tickets. T
      npm install
      ```
 3. **Configure environment variables:**
-   - Create a `.env` file in the `server/` directory for MongoDB URI and JWT secret.
+   - Create a `.env` file in the `server/` directory with the following:
+     ```env
+     DB_HOST=your_mysql_host
+     DB_USER=your_mysql_user
+     DB_PASSWORD=your_mysql_password
+     DB_NAME=your_database_name
+     JWT_SECRET=your_jwt_secret
+     ```
 
 4. **Run the application:**
    - Start backend:
@@ -76,7 +84,7 @@ client/           # React frontend
     components/   # Reusable UI components
     pages/        # Application pages (Home, Login, Booking, etc.)
 server/           # Node.js backend
-  db.js           # Database connection
+  db.js           # Database connection (MySQL)
   index.js        # Main server file
 ```
 
